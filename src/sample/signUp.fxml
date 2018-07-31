@@ -16,7 +16,7 @@
                 <Button fx:id="authButton" layoutX="270.0" layoutY="302.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="173.0" text="ЗАРЕГИСТРИРОВАТЬСЯ" />
                 <PasswordField fx:id="password" layoutX="385.0" layoutY="114.0" prefHeight="38.0" prefWidth="262.0" promptText="Пароль" style="-fx-background-color: #fafafa; -fx-border-color: SILVER; -fx-border-radius: 5;" />
             <TextField fx:id="userName" layoutX="39.0" layoutY="114.0" prefHeight="38.0" prefWidth="262.0" promptText="Логин" style="-fx-background-color: WHITE; -fx-border-color: SILVER; -fx-border-radius: 5;" />
-            <TextField fx:id="location" layoutX="226.0" layoutY="246.0" prefHeight="38.0" prefWidth="262.0" promptText="Страна" style="-fx-background-color: WHITE; -fx-border-color: SILVER; -fx-border-radius: 5;" />
+            <TextField fx:id="Local" layoutX="226.0" layoutY="246.0" prefHeight="38.0" prefWidth="262.0" promptText="Страна" style="-fx-background-color: WHITE; -fx-border-color: SILVER; -fx-border-radius: 5;" />
             <TextField fx:id="lastName" layoutX="385.0" layoutY="31.0" prefHeight="38.0" prefWidth="262.0" promptText="Фамилия" style="-fx-background-color: WHITE; -fx-border-color: SILVER; -fx-border-radius: 5;" />
             <CheckBox fx:id="checkMale" layoutX="233.0" layoutY="201.0" mnemonicParsing="false" selected="true" text="Мужчина" />
             <CheckBox fx:id="CheckFemale" layoutX="385.0" layoutY="201.0" mnemonicParsing="false" text="Женщина" />
