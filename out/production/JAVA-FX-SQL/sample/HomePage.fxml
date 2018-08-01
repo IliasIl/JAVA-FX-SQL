@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomePageController">
+    <children>
+        <AnchorPane layoutY="124.0" prefHeight="376.0" prefWidth="700.0" style="-fx-background-color: #EEEEEE;">
+         <children>
+            <TextField fx:id="TextField" layoutX="118.0" layoutY="29.0" prefHeight="74.0" prefWidth="431.0" style="-fx-background-color: #fafafa; -fx-border-color: SILVER; -fx-border-radius: 5;">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="247.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@asserts/12.png" />
+               </image>
+            </ImageView>
+         </children>
+        </AnchorPane>
+        <Label layoutX="199.0" layoutY="33.0" prefHeight="58.0" prefWidth="338.0" text="IliaIliasov" textFill="#f8f0f0">
+            <font>
+                <Font name="Courier New" size="42.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

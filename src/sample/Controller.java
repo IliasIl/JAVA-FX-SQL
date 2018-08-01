@@ -1,5 +1,6 @@
 package sample;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -70,8 +71,22 @@ try {
     }
 } catch (Exception ex){ex.printStackTrace();}
 if (count>=1){
-    System.out.println("Success");
-}
+    System.out.println("Success!");
+    authButton.getScene().getWindow().hide();
+    FXMLLoader loader= new FXMLLoader();
+    loader.setLocation(getClass().getResource("/sample/HomePage.fxml"));
+    try {
+        loader.load();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    Parent root= loader.getRoot();
+    Scene scene= new Scene(root);
+    Stage stage= new Stage();
+    stage.setScene(scene);
+    stage.showAndWait();
+
+} else System.out.println("Error!");
     }
 
 
