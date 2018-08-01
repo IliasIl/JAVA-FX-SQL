@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import java.sql.*;
 
 public class Controller {
 
@@ -33,6 +34,15 @@ public class Controller {
 
     @FXML
     void initialize() {
+        authButton.setOnAction(event -> {
+            String login= user_field.getText().trim();
+            String pass= pass_field.getText().trim();
+            if (!login.equals("") && !pass.equals("")){
+                loginUser(login,pass);
+            } else System.out.println("Login and password is empty!");
+        });
+
+
     SignUpButton.setOnAction(event -> {
     SignUpButton.getScene().getWindow().hide();
     FXMLLoader loader= new FXMLLoader();
@@ -47,6 +57,22 @@ public class Controller {
     stage.showAndWait();
 
 });
-
     }
+
+    private void loginUser(String login, String pass) {
+    DatabaseHandler dbHandler= new DatabaseHandler();
+    User user= new User(login,pass);
+    ResultSet result = dbHandler.getUser(user);
+    int count= 0;
+try {
+    while (result.next()) {
+        count++;
+    }
+} catch (Exception ex){ex.printStackTrace();}
+if (count>=1){
+    System.out.println("Success");
+}
+    }
+
+
 }

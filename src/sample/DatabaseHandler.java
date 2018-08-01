@@ -26,6 +26,21 @@ public class DatabaseHandler extends Configs{
         }
         catch(Exception ex){ex.printStackTrace();}
     }
+
+    public ResultSet getUser(User user){
+        ResultSet resSet= null;
+        String select= "SELECT * FROM "+ Const.USER_TABLE+ " WHERE "+ Const.USERS_USERNAME+"=? AND "+Const.USERS_PASSWORD + "=? ";
+try {
+    PreparedStatement st= getDbConnection().prepareStatement(select);
+    st.setString(1, user.getUserName());
+    st.setString(2, user.getPassword());
+    resSet=st.executeQuery();
+
+}catch(Exception ex){ex.printStackTrace();}
+
+        return resSet;
+    }
+
 }
 
 
