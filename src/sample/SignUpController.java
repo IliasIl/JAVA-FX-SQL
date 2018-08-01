@@ -42,8 +42,26 @@ public class SignUpController {
 
     @FXML
     void initialize() {
-
+authButton.setOnAction(event -> {
+    signUpNewUser();
+});
 
     }
-}
+
+    private void signUpNewUser() {
+        DatabaseHandler dbHandler= new DatabaseHandler();
+        String firstname= firstName.getText();
+        String lastname= lastName.getText();
+        String username= userName.getText();
+        String passw= password.getText();
+        String location=Local.getText();
+        String gender="";
+        if (checkMale.isSelected()){
+             gender="Мужчина"; } else gender="Женщина";
+        User user= new User(firstname, lastname, username, passw, location, gender);
+        dbHandler.signUpUser(user);
+
+        }
+    }
+
 
