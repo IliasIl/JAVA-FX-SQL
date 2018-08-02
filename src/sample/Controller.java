@@ -11,6 +11,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sample.Animations.Shake;
+
 import java.sql.*;
 
 public class Controller {
@@ -86,7 +88,13 @@ if (count>=1){
     stage.setScene(scene);
     stage.showAndWait();
 
-} else System.out.println("Error!");
+} else
+{
+    Shake userLogin= new Shake(user_field);
+    Shake passww= new Shake(pass_field);
+    userLogin.playAnim();
+    passww.playAnim();
+}
     }
 
 
