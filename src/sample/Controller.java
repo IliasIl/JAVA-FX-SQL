@@ -47,17 +47,8 @@ public class Controller {
 
 
     SignUpButton.setOnAction(event -> {
-    SignUpButton.getScene().getWindow().hide();
-    FXMLLoader loader= new FXMLLoader();
-    loader.setLocation(getClass().getResource("/sample/signUp.fxml"));
-    try{
-        loader.load();
-    } catch(Exception ex){ex.printStackTrace();}
-    Parent root= loader.getRoot();
-    Scene scene= new Scene(root);
-    Stage stage= new Stage();
-    stage.setScene(scene);
-    stage.showAndWait();
+
+        openNewScene(SignUpButton, "/sample/signUp.fxml");
 
 });
     }
@@ -73,20 +64,8 @@ try {
     }
 } catch (Exception ex){ex.printStackTrace();}
 if (count>=1){
-    System.out.println("Success!");
-    authButton.getScene().getWindow().hide();
-    FXMLLoader loader= new FXMLLoader();
-    loader.setLocation(getClass().getResource("/sample/HomePage.fxml"));
-    try {
-        loader.load();
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
-    Parent root= loader.getRoot();
-    Scene scene= new Scene(root);
-    Stage stage= new Stage();
-    stage.setScene(scene);
-    stage.showAndWait();
+    openNewScene(authButton, "/sample/HomePage.fxml");
+
 
 } else
 {
@@ -96,6 +75,18 @@ if (count>=1){
     passww.playAnim();
 }
     }
-
+public void openNewScene(Button button, String window){
+    button.getScene().getWindow().hide();
+    FXMLLoader loader= new FXMLLoader();
+    loader.setLocation(getClass().getResource(window));
+    try{
+        loader.load();
+    } catch(Exception ex){ex.printStackTrace();}
+    Parent root= loader.getRoot();
+    Scene scene= new Scene(root);
+    Stage stage= new Stage();
+    stage.setScene(scene);
+    stage.showAndWait();
+}
 
 }
