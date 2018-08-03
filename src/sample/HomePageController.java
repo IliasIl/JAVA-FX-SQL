@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
-public class HomePageController {
+public class HomePageController{
 
     @FXML
     private ResourceBundle resources;
@@ -18,7 +18,9 @@ public class HomePageController {
 
     @FXML
     void initialize() {
-        assert TextField != null : "fx:id=\"TextField\" was not injected: check your FXML file 'HomePage.fxml'.";
+        TextField.setText("ДОБРО ПОЖАЛОВАТЬ!");
 
     }
+
+
 }

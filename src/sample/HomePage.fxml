@@ -11,7 +11,7 @@
     <children>
         <AnchorPane layoutY="124.0" prefHeight="376.0" prefWidth="700.0" style="-fx-background-color: #EEEEEE;">
          <children>
-            <TextField fx:id="TextField" layoutX="118.0" layoutY="29.0" prefHeight="74.0" prefWidth="431.0" style="-fx-background-color: #fafafa; -fx-border-color: SILVER; -fx-border-radius: 5;">
+            <TextField fx:id="TextField" editable="false" layoutX="118.0" layoutY="29.0" prefHeight="74.0" prefWidth="431.0" style="-fx-background-color: #fafafa; -fx-border-color: SILVER; -fx-border-radius: 5;">
                <font>
                   <Font size="30.0" />
                </font>

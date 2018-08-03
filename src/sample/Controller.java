@@ -17,6 +17,9 @@ import java.sql.*;
 
 public class Controller {
 
+    User user;
+
+
     @FXML
     private ResourceBundle resources;
 
@@ -53,10 +56,12 @@ public class Controller {
 });
     }
 
-    private void loginUser(String login, String pass) {
+    public void loginUser(String login, String pass) {
     DatabaseHandler dbHandler= new DatabaseHandler();
-    User user= new User(login,pass);
+    user= new User(login,pass);
     ResultSet result = dbHandler.getUser(user);
+
+
     int count= 0;
 try {
     while (result.next()) {
